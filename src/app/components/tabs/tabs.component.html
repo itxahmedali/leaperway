@@ -1,0 +1,182 @@
+<div class="cstm-container">
+  <div class="tabs-box">
+    <div id="main-content">
+      <mat-tab-group>
+        <!-- tab1 -->
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="img-box">
+              <img src="assets/SVG/restaurant-info.svg">
+            </div>
+            <span>Restaurant Info</span>
+          </ng-template>
+          <h1 class="colorBlue restaurantInfo">Restaurant Info</h1>
+          <div class="input-boxes">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="input-box d-flex flex-column">
+                  <label for="">Restaurant Name</label>
+                  <input type="text" placeholder="Restaurant Name">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-box d-flex flex-column">
+                  <label for="">Phone</label>
+                  <input type="tel" placeholder="Phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-box d-flex flex-column address-input">
+                  <label for="">Address</label>
+                  <input type="text" placeholder="Address">
+                  <button>
+                    <img src="assets/SVG/location.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-box d-flex flex-column">
+                  <label for="">City</label>
+                  <input type="text" placeholder="City">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-box d-flex flex-column">
+                  <label for="">State</label>
+                  <input type="text" placeholder="State">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-box d-flex flex-column">
+                  <label for="">Country</label>
+                  <input type="text" placeholder="Country">
+                </div>
+              </div>
+            </div>
+            <div class="change-restaurant">
+              <label for="">If you want to change any Restaurant information can contact to <a
+                  href="">info@example.com</a></label>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="img-box">
+              <img src="assets/SVG/deals.svg">
+            </div>
+            <span>Deals</span>
+          </ng-template>
+          <div class="head d-flex justify-content-between">
+            <h1 class="colorBlue restaurantInfo">Deals</h1>
+            <button class="redBtn" data-bs-toggle="modal" data-bs-target="#addDeal">Add</button>
+          </div>
+          <div class="deals-cards">
+            <div class="row">
+              <div class="col-lg-4" *ngFor="let cards of cards">
+                <div class="card" style="width: 95%;">
+                  <div class="menuBtn">
+                    <button class="toggleMenu" mat-button [matMenuTriggerFor]="menu"> <i class="fa fa-ellipsis-v colorRed fa-lg"></i> </button>
+                    <mat-menu #menu="matMenu" class="customize">
+                      <button mat-menu-item class="menuBtn">Edit</button>
+                      <button mat-menu-item class="menuBtn">Delete</button>
+                    </mat-menu>
+                  </div>
+                  <img src="{{cards.img}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h1 class="colorBlue title">{{cards.name}}</h1>
+                    <p class="card-text">{{cards.details}}</p>
+                    <div class="qty-price d-flex justify-content-between">
+                      <div class="qty">
+                        <label for="">Qty: </label>
+                        <label for="" class="colorRed qtyLabel">{{cards.qty}}</label>
+                      </div>
+                      <div class="price">
+                        <label for="">Price: </label>
+                        <label for="" class="colorRed priceLabel">{{cards.price | currency:'USD'}}</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="img-box">
+              <img src="assets/SVG/orders.svg">
+            </div>
+            <span>Orders</span>
+          </ng-template>
+          <div class="tab3">
+            <h1 class="colorBlue restaurantInfo">Orders</h1>
+            <mat-tab-group>
+              <mat-tab label="First"> Content 1 </mat-tab>
+              <mat-tab label="Second"> Content 2 </mat-tab>
+              <mat-tab label="Third"> Content 3 </mat-tab>
+            </mat-tab-group>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
+
+
+<!-- add deal modal -->
+<div class="modal fade" id="addDeal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="head d-flex justify-content-between align-items-center">
+          <h1 class="colorBlue">Add Deal</h1>
+          <div class="headBtns d-flex">
+            <button class="cancelBtn" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            <button class="redBtn">Save</button>
+          </div>
+        </div>
+        <div class="modalBody">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="imgUploadBox">
+                <div class="img-box hide">
+                  <img src="{{url}}" alt="" (click)="click()" class="imgShown">
+                </div>
+                <label for="imgUpload" class="imgUploadLabel"> <i class="fa fa-plus fa-lg"></i> Upload Image </label>
+                <input type="file" hidden id="imgUpload" (change)="selectFile($event)">
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="input-field">
+                    <label for="">Deal Name</label>
+                    <input type="text" placeholder="Deal Name">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="input-field">
+                    <label for="">Price</label>
+                    <input type="text" placeholder="Price">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="input-field">
+                    <label for="">Person</label>
+                    <input type="text" placeholder="Person">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="input-field">
+                    <label for="">Menu</label>
+                    <textarea name="" id=""  rows="4" placeholder="Menu"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

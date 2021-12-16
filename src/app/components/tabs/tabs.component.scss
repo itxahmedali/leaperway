@@ -1,0 +1,370 @@
+// tabs
+:host {
+  ::ng-deep {
+    .mat-tab-group {
+      flex-direction: row;
+    }
+
+    .mat-tab-header {
+      border-bottom: none;
+    }
+
+    .mat-tab-header-pagination {
+      display: none !important;
+    }
+
+    .mat-tab-label {
+      justify-content: flex-start;
+      min-width: 250px;
+      padding: 0;
+      height: 80px;
+      position: relative;
+      opacity: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #E6E6E6;
+        height: 1px;
+        width: 100%;
+      }
+    }
+
+    .mat-tab-label-content {
+      .img-box {
+        width: 40px;
+        height: 25px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .mat-tab-labels {
+      flex-direction: column;
+    }
+
+    .mat-ink-bar {
+      height: 100%;
+      left: 98% !important;
+    }
+
+    .mat-tab-body-wrapper {
+      flex: 1 1 auto;
+      padding-left: 5rem;
+    }
+
+    .mat-tab-group.mat-primary .mat-ink-bar,
+    .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+      background: none;
+    }
+
+    .mat-tab-label,
+    .mat-tab-link {
+      color: #999999;
+    }
+  }
+}
+
+::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+::ng-deep.mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+  color: black;
+  opacity: 1;
+}
+
+::ng-deep .customize {
+  background: #fff;
+}
+
+::ng-deep .menuBtn {
+  color: #000;
+  font-weight: 600;
+
+  &:nth-child(2) {
+    color: #E83131;
+  }
+}
+
+#main-content {
+
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// css
+.cstm-container {
+  width: 1280px;
+  margin: 0 auto;
+
+  .tabs-box {
+    margin-top: 5rem;
+
+    // tab1
+    .restaurantInfo {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+
+    .input-boxes {
+      margin-top: 2rem;
+
+      .col-lg-6 {
+        margin-bottom: 1rem;
+
+        .input-box {
+          label {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #000;
+          }
+
+          input {
+            padding: 15px 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #F2F2F2;
+            outline: none;
+
+            &::placeholder {
+              color: #666666;
+              font-weight: 500;
+            }
+          }
+        }
+
+        // address input field
+        .address-input {
+          position: relative;
+
+          button {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            padding: 10px;
+            background: #E6E6E6;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .change-restaurant {
+      margin-top: 2rem;
+      color: #666666;
+
+      a {
+        color: #29ABE2;
+      }
+    }
+
+    // tab2
+    .deals-cards {
+      .row {
+        margin-top: 2rem;
+
+        .col-lg-4 {
+          padding: 10px;
+
+          .card {
+            position: relative;
+            border: none;
+            box-shadow: 0 0 11px -4px rgb(0 0 0 / 31%);
+            -webkit-box-shadow: 0 0 11px -4px rgb(0 0 0 / 31%);
+            -moz-box-shadow: 0 0 11px -4px rgb(0 0 0 / 31%);
+            margin: 0 auto;
+
+            .menuBtn {
+              display: flex;
+              justify-content: flex-end;
+
+              .toggleMenu {
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                background: #ffffff6b;
+                border-radius: 100px;
+                border: none;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+            }
+
+
+            .title {
+              font-size: 1.2rem;
+              font-weight: 600;
+            }
+
+            .card-text {
+              color: #666666;
+            }
+
+            .qty-price {
+              margin-top: 2rem;
+
+              .qtyLabel,
+              .priceLabel {
+                margin-left: 5px;
+              }
+
+              .priceLabel {
+                font-size: 1.3rem;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// tab 3
+.tab3 ::ng-deep .mat-tab-labels
+ {
+  flex-direction: row !important;
+}
+.tab3 ::ng-deep .mat-tab-group{
+  flex-direction: column !important;
+}
+.tab3 ::ng-deep .mat-tab-label{
+  justify-content: center;
+  min-width: 110px;
+  background: #F2F2F2;
+  margin: 0 5px;
+  height: 40px;
+  border-radius: 8px;
+  color:#1E3865;
+  &::before{
+    content: unset;
+  }
+}
+.tab3 ::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+.tab3 ::ng-deep.mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+  color: #fff;
+  background: #1E3865;
+  opacity: 1;
+}
+.tab3 ::ng-deep.mat-tab-body-wrapper{
+  margin-top: 20px;
+}
+// modal css
+#addDeal {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .headBtns {
+    button {
+      padding: 10px 0;
+      min-width: 90px;
+      margin: 0 5px;
+    }
+
+    .cancelBtn {
+      border: 1px solid #E83131;
+      border-radius: 8px;
+      background: none;
+      color: #E83131;
+      font-weight: 600;
+    }
+  }
+
+  .modalBody {
+    .row {
+      margin-top: 2rem;
+      .col-lg-3 {
+        .imgUploadBox {
+          background: #F2F2F2;
+          width: 100%;
+          height: 95%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+          overflow: hidden;
+          .img-box{
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: top;
+            }
+          }
+
+          label {
+            color: #E83131;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+              width: 50px;
+              height: 50px;
+              background: #E6E6E6;
+              border-radius: 100px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #E83131;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+
+      .col-lg-9 {
+        .input-field {
+          margin: 10px 0;
+
+          label {
+            font-weight: 600;
+          }
+
+          input,
+          textarea {
+            width: 100%;
+            background: #F2F2F2;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            padding: 20px 1rem;
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+  }
+}

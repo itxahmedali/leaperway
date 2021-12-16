@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+.colorRed{
+  color:#E83131;
+}
+.colorBlue{
+  color:#1E3865;
+}
+.redBtn{
+  background-color: #E83131;
+  padding: 10px 50px;
+  border:none;
+  border-radius: 8px;
+  color:#fff;
+  font-weight: 600;
+}
+.hide{
+  display: none;
+}
+// mat headings
+.mat-h3, .mat-subheading-2, .mat-typography h3,
+.mat-h1, .mat-headline, .mat-typography h1
+{
+  font: initial;
+  font-family: sans-serif;
+}
+// commons
+.row{
+  width: 100%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
