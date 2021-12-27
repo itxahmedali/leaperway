@@ -16,7 +16,7 @@
       }
       p{
         margin: 0;
-        font-weight: 600;
+        font-family: gilroyBold;
         font-size: 20px;
       }
       p:nth-child(2){
@@ -25,4 +25,27 @@
 
     }
   }
+}
+@media only screen and (min-width:1920px){
+  .header-logo{
+    .row{
+      .logo-box{
+        .img-box{
+          width: 70px;
+          height: 70px;
+        }
+        p{
+          font-size: 30px;
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:414px){
+  .header-logo{
+    padding:1rem;
+  }
+
 }
