@@ -7,8 +7,25 @@
 
     .mat-tab-header {
       border-bottom: none;
+      overflow: inherit;
+      margin-right: 5rem;
+      // border-right: 1px solid #000;
+      // position: relative;
+      // -webkit-box-shadow: 3px 0px 19px -3px rgb(79 79 79 / 17%);
+      // box-shadow: 3px 0px 19px -3px rgb(79 79 79 / 17%);
     }
-
+    .mat-tab-header::before{
+      content: "";
+      content: "";
+      position: absolute;
+      right: -5px;
+      top: -16%;
+      height: 100%;
+      max-height: 1600px;
+      width: 2px;
+      background: #6666660f;
+      z-index: 10;
+    }
     .mat-tab-header-pagination {
       display: none !important;
     }
@@ -61,7 +78,7 @@
 
     .mat-tab-body-wrapper {
       flex: 1 1 auto;
-      padding-left: 5rem;
+      // padding-left: 5rem;
     }
 
     .mat-tab-group.mat-primary .mat-ink-bar,
@@ -88,7 +105,7 @@
 
 ::ng-deep .menuBtn {
   color: #000;
-  font-weight: 600;
+  font-family: gilroyBold;
 
   &:nth-child(2) {
     color: #E83131;
@@ -107,18 +124,22 @@
     clear: both;
   }
 }
+.header-logo[_ngcontent-old-c64]{
+  max-width: 1280px !important;
+  margin: 0 auto !important;
 
+}
 // css
 .cstm-container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 
   .tabs-box {
-    margin-top: 5rem;
+    // margin-top: 5rem;
 
     // tab1
     .restaurantInfo {
-      font-weight: 600;
+      font-family: gilroyBold;
       font-size: 2rem;
     }
 
@@ -220,7 +241,7 @@
 
             .title {
               font-size: 1.2rem;
-              font-weight: 600;
+              font-family: gilroyBold;
             }
 
             .card-text {
@@ -237,7 +258,7 @@
 
               .priceLabel {
                 font-size: 1.3rem;
-                font-weight: 600;
+                font-family: gilroyBold;
               }
             }
           }
@@ -247,6 +268,9 @@
   }
 }
 // tab 3
+.tab3 ::ng-deep .mat-tab-body-wrapper {
+  padding-left: 0;
+}
 .tab3 ::ng-deep .mat-tab-labels
  {
   flex-direction: row !important;
@@ -279,7 +303,7 @@
 #addDeal {
   h1 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-family: gilroyBold;
     margin: 0;
   }
 
@@ -295,7 +319,7 @@
       border-radius: 8px;
       background: none;
       color: #E83131;
-      font-weight: 600;
+      font-family: gilroyBold;
     }
   }
 
@@ -350,7 +374,7 @@
           margin: 10px 0;
 
           label {
-            font-weight: 600;
+            font-family: gilroyBold;
           }
 
           input,
@@ -367,4 +391,98 @@
       }
     }
   }
+}
+.currentOrder,
+.expiredOrders,
+.withdrawOrders{
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.currentOrder .row,
+.expiredOrders .row,
+.withdrawOrders .row{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0px 8px 29px -7px rgb(79 79 79 / 19%);
+  -webkit-box-shadow:0px 8px 29px -7px rgb(79 79 79 / 19%);
+  border-radius: 10px;
+  padding: 20px 5px;
+}
+.currentOrder .row .col.leapBtn,
+.expiredOrders .row .col.leapBtn,
+.withdrawOrders .row .col.leapBtn{
+  text-align: right;
+}
+.currentOrder .row .col label,
+.expiredOrders .row .col label,
+.withdrawOrders .row .col label{
+  font-weight: 500;
+  color: #666666;
+}
+.currentOrder .row .col h1,
+.expiredOrders .row .col h1,
+.withdrawOrders .row .col h1{
+  color:#000;
+  font-family: gilroyMedium;
+}
+.currentOrder .row .col .leaperName h1,
+.expiredOrders .row .col .leaperName h1,
+.withdrawOrders .row .col .leaperName h1{
+  color:#E83131;
+}
+.currentOrder .row .col .leaperBtn button{
+  color: #fff;
+    background: #1E3865;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.expiredOrders .row .col .leaperBtn button{
+  color: #fff;
+    background: #E83131;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.withdrawOrders .row .col .leaperBtn button{
+  color: #fff;
+    background: #39B54A;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+// verifyModal
+#verifyModal,
+#verifyDate,
+#verifyCoupon{
+  .modal-body{
+    padding:20px 40px;
+    h1{
+      font-family: gilroyBold;
+      font-size: 1.5rem;
+    }
+    p{
+      color:#666666;
+    }
+    .verificationBtns{
+      button{
+        margin: 10px 0;
+      }
+    }
+    input{
+      width: 100%;
+      padding:10px;
+      border: none;
+      border-radius: 10px;
+      background: #F2F2F2;
+      color:#666666;
+      outline:none;
+    }
+  }
+}
+
+@media only screen and (max-width:1024px){
+//   .cstm-container{
+//     width: 910px;
+// }
 }

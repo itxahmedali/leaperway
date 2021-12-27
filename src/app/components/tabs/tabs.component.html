@@ -75,7 +75,8 @@
               <div class="col-lg-4" *ngFor="let cards of cards">
                 <div class="card" style="width: 95%;">
                   <div class="menuBtn">
-                    <button class="toggleMenu" mat-button [matMenuTriggerFor]="menu"> <i class="fa fa-ellipsis-v colorRed fa-lg"></i> </button>
+                    <button class="toggleMenu" mat-button [matMenuTriggerFor]="menu"> <i
+                        class="fa fa-ellipsis-v colorRed fa-lg"></i> </button>
                     <mat-menu #menu="matMenu" class="customize">
                       <button mat-menu-item class="menuBtn">Edit</button>
                       <button mat-menu-item class="menuBtn">Delete</button>
@@ -111,9 +112,306 @@
           <div class="tab3">
             <h1 class="colorBlue restaurantInfo">Orders</h1>
             <mat-tab-group>
-              <mat-tab label="First"> Content 1 </mat-tab>
-              <mat-tab label="Second"> Content 2 </mat-tab>
-              <mat-tab label="Third"> Content 3 </mat-tab>
+              <mat-tab label="First">
+                <ng-template mat-tab-label>
+                  Current Orders
+                </ng-template>
+                <div class="currentOrder">
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button data-bs-toggle="modal" data-bs-target="#verifyModal">Verify</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button data-bs-toggle="modal" data-bs-target="#verifyModal">Verify</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button data-bs-toggle="modal" data-bs-target="#verifyModal">Verify</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Second">
+                <ng-template mat-tab-label>
+                  Expired Orders
+                </ng-template>
+                <div class="expiredOrders">
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button>Expired</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button>Expired</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button>Expired</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Third">
+                <ng-template mat-tab-label>
+                  Withdraw
+                </ng-template>
+                <div class="withdrawOrders">
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button>Completed</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button>Completed</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="leaperName">
+                        <label for="">Leaper Name</label>
+                        <h1>Jacob Gomez</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="leaperDeal">
+                        <label for="">Leaper Deal</label>
+                        <h1>Deal 01</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="dealPrice">
+                        <label for="">Deal Price</label>
+                        <h1>$10.2</h1>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="coupanDate">
+                        <label for="">Coupan Date</label>
+                        <h1>19-08-2021</h1>
+                      </div>
+                    </div>
+                    <div class="col leapBtn">
+                      <div class="leaperBtn">
+                        <button>Completed</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
             </mat-tab-group>
           </div>
         </mat-tab>
@@ -124,7 +422,7 @@
 
 
 <!-- add deal modal -->
-<div class="modal fade" id="addDeal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addDeal" tabindex="-1" aria-labelledby="addDealLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-body">
@@ -169,12 +467,59 @@
                 <div class="col-lg-12">
                   <div class="input-field">
                     <label for="">Menu</label>
-                    <textarea name="" id=""  rows="4" placeholder="Menu"></textarea>
+                    <textarea name="" id="" rows="4" placeholder="Menu"></textarea>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- verify by modal -->
+<div class="modal fade" id="verifyModal" tabindex="-1" aria-labelledby="verifyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <h1 class="colorBlue">Verify By</h1>
+        <p>Please verify by coupon code or date of birth</p>
+        <div class="verificationBtns d-flex flex-column">
+          <button class="redBtn" data-bs-toggle="modal" data-bs-target="#verifyDate" data-bs-dismiss="modal">Date Of Birth</button>
+          <button class="redBtn"  data-bs-toggle="modal" data-bs-target="#verifyCoupon" data-bs-dismiss="modal">Coupon Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- verify by date -->
+<div class="modal fade" id="verifyDate" tabindex="-1" aria-labelledby="verifyDateLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <h1 class="colorBlue">Date Of Birth</h1>
+        <div class="inputBox">
+          <input type="date" name="" id="">
+        </div>
+        <div class="verificationBtns d-flex flex-column">
+          <button class="redBtn">Verify</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- verify by coupon -->
+<div class="modal fade" id="verifyCoupon" tabindex="-1" aria-labelledby="verifyCouponLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <h1 class="colorBlue">Coupon Code</h1>
+        <div class="inputBox">
+          <input type="text" name="" id="" placeholder="Coupon Code">
+        </div>
+        <div class="verificationBtns d-flex flex-column">
+          <button class="redBtn">Verify</button>
         </div>
       </div>
     </div>

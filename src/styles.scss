@@ -1,30 +1,68 @@
-.colorRed{
-  color:#E83131;
+@font-face {
+  font-family: gilroyBlack;
+  src: url(assets/fonts/Gilroy-Black.ttf);
 }
-.colorBlue{
-  color:#1E3865;
+
+@font-face {
+  font-family: gilroyMedium;
+  src: url(assets/fonts/Gilroy-Medium.ttf);
 }
-.redBtn{
+
+@font-face {
+  font-family: gilroyBold;
+  src: url(assets/fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+  font-family: gilroyLight;
+  src: url(assets/fonts/Gilroy-Light.ttf);
+}
+
+.colorRed {
+  color: #E83131;
+}
+
+.colorBlue {
+  color: #1E3865;
+}
+
+.redBtn {
   background-color: #E83131;
-  padding: 10px 50px;
-  border:none;
+  padding: 15px 40px;
+  border: none;
   border-radius: 8px;
-  color:#fff;
-  font-weight: 600;
+  color: #fff;
+  font-family: gilroyBold;
+  height: fit-content;
 }
-.hide{
+
+.hide {
   display: none;
 }
+
 // mat headings
-.mat-h3, .mat-subheading-2, .mat-typography h3,
-.mat-h1, .mat-headline, .mat-typography h1
-{
+.mat-h3,
+.mat-subheading-2,
+.mat-typography h3,
+.mat-h1,
+.mat-headline,
+.mat-typography h1 {
   font: initial;
   font-family: sans-serif;
 }
+
 // commons
-.row{
+.row {
   width: 100%;
+  margin: 0 auto;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
